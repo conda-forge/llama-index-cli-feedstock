@@ -14,7 +14,7 @@ build:
     - llamaindex-cli = llama_index.cli.command_line:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.8.1,<4.0
-    - llama-index-core >=0.10.11,<0.10.12
+    - llama-index-core >=0.10.11,<0.11.0
     - llama-index-embeddings-openai >=0.1.1,<0.2.0
     - llama-index-llms-openai >=0.1.1,<0.2.0
 
