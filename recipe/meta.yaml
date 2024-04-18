@@ -1,5 +1,5 @@
 {% set name = "llama-index-cli" %}
-{% set version = "0.1.11" %}
+{% set version = "0.1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index_cli-{{ version }}.tar.gz
-  sha256: 5de707e125aa877d70c61da70cc44fea72a9f7adb77f413b51f73b1deffdd750
+  sha256: 3cf1f706c3c69c6b1aab07fca7faad3959db1709808efd50491b669d38b0b580
 
 build:
   entry_points:
     - llamaindex-cli = llama_index.cli.command_line:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.8.1,<4.0
-    - llama-index-core >=0.10.11,<0.11.0
+    - llama-index-core >=0.10.11,<0.10.12
     - llama-index-embeddings-openai >=0.1.1,<0.2.0
     - llama-index-llms-openai >=0.1.1,<0.2.0
 
