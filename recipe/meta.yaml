@@ -1,5 +1,5 @@
 {% set name = "llama-index-cli" %}
-{% set version = "0.1.12" %}
+{% set version = "0.1.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index_cli-{{ version }}.tar.gz
-  sha256: 3cf1f706c3c69c6b1aab07fca7faad3959db1709808efd50491b669d38b0b580
+  sha256: 86147ded4439fbab1d6c7c0d72e8f231d2935da9fdf5c9d3f0dde4f35d44aa59
 
 build:
   entry_points:
