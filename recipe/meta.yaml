@@ -1,5 +1,5 @@
 {% set name = "llama-index-cli" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index_cli-{{ version }}.tar.gz
-  sha256: d6ab201359962a8a34368aeda3a49bbbe67e9e009c59bd925c4fb2be4ace3906
+  sha256: 3f97f1f8f5f401dfb5b6bc7170717c176dcd981538017430073ef12ffdcbddfa
 
 build:
   entry_points:
     - llamaindex-cli = llama_index.cli.command_line:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
